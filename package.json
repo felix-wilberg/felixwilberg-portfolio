@@ -11,7 +11,12 @@
   "dependencies": {
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
-    "next": "15.1.6"
+    "classnames": "^2.5.1",
+    "date-fns": "^4.1.0",
+    "gray-matter": "^4.0.3",
+    "next": "15.1.6",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",
