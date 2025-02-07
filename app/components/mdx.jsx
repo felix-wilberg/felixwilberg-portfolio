@@ -48,12 +48,12 @@ const RoundedImage = (props) => {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;
 };
 
-const Code = ({ children, ...props }: { children: string }) => {
+const Code = ({ children, ...props }) => {
   const codeHTML = highlight(children);
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 };
 
-const slugify = (str: string) => {
+const slugify = (str) => {
   return str
     .toString()
     .toLowerCase()
@@ -64,7 +64,7 @@ const slugify = (str: string) => {
     .replace(/\-\-+/g, '-'); // Replace multiple - with single -
 };
 
-const createHeading = (level: number) => {
+const createHeading = (level) => {
   const Heading = ({ children }) => {
     const slug = slugify(children);
     return React.createElement(
