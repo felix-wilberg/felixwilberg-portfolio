@@ -7,12 +7,14 @@ export default function Page() {
         Hej, I&#39;m Felix! 👋
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {`I'm a Business Informatics student at TU Wien and currently finishing my
+        Master's thesis. I'm passionate about web development, product management
+        and cycling. I'm always looking for new challenges and opportunities to
+        learn and grow.`}
       </p>
+      <h2 className="mt-8 mb-4 text-xl font-semibold tracking-tighter">
+        Recent Blog Posts
+      </h2>
       <div className="my=8">
         <BlogPosts />
       </div>
