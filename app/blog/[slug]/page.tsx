@@ -1,23 +1,44 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug } from '@/lib/api';
-import { CMS_NAME } from '@/lib/constants';
-import markdownToHtml from '@/lib/markdownToHtml';
 import { formatDate } from '@/lib/api';
-import PostBody from '@/app/components/PostBody';
+import { baseUrl } from '@/app/sitemap';
+import CustomMDX from '@/app/components/mdx';
 import CoverImage from '@/app/components/CoverImage';
 
-export default async function Post(props: Params) {
+const Post = async (props: Params) => {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
   }
-  const content = await markdownToHtml(post.content || '');
+
   return (
     <main>
       <section>
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BlogPosting',
+              headline: post.title,
+              datePublished: post.date,
+              dateModified: post.date,
+              description: post.excerpt,
+              image: post.ogImage
+                ? `${baseUrl}${post.ogImage.url}`
+                : `/og?title=${encodeURIComponent(post.title)}`,
+              url: `${baseUrl}/blog/${post.slug}`,
+              author: {
+                '@type': 'Person',
+                name: 'My Portfolio'
+              }
+            })
+          }}
+        />
         <h1 className="title font-semibold text-2xl tracking-tighter">
           {post.title}
         </h1>
@@ -30,12 +51,14 @@ export default async function Post(props: Params) {
           <CoverImage title={post.title} src={post.ogImage.url} />
         )}
         <article className="prose">
-          <PostBody content={content} />
+          <CustomMDX source={post.content} />
         </article>
       </section>
     </main>
   );
-}
+};
+
+export default Post;
 
 type Params = {
   params: Promise<{
@@ -51,22 +74,31 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = `${post.title} | ${CMS_NAME}`;
-
-  if (!post.ogImage) {
-    return {
-      title,
-      openGraph: {
-        title
-      }
-    };
-  }
+  const { title, date: publishedTime, excerpt: description, ogImage } = post;
+  const ogImageNew = ogImage
+    ? ogImage.url
+    : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
+    description,
     openGraph: {
       title,
-      images: [post.ogImage.url]
+      description,
+      type: 'article',
+      publishedTime,
+      url: `${baseUrl}/blog/${post.slug}`,
+      images: [
+        {
+          url: ogImageNew
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImageNew]
     }
   };
 }
