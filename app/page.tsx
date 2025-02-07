@@ -1,15 +1,21 @@
-const Home = () => {
-  return (
-    <div className="bg-gray-900 text-white">
-      <main className="flex flex-col min-h-screen justify-center items-center ">
-        <h1 className="text-6xl font-semibold mb-6">Hi, I&#39;m Felix</h1>
-        <p className="mt-4 text-2xl">
-          I&#39;m currently rebuilding this website. Stay tuned for more
-          updates.
-        </p>
-      </main>
-    </div>
-  );
-};
+import BlogPosts from '@/app/components/BlogPosts';
 
-export default Home;
+export default function Page() {
+  return (
+    <section>
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+        Hej, I&#39;m Felix! 👋
+      </h1>
+      <p className="mb-4">
+        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
+        Vim's keystroke commands and tabs' flexibility for personal viewing
+        preferences. This extends to my support for static typing, where its
+        early error detection ensures cleaner code, and my preference for dark
+        mode, which eases long coding sessions by reducing eye strain.`}
+      </p>
+      <div className="my=8">
+        <BlogPosts />
+      </div>
+    </section>
+  );
+}
