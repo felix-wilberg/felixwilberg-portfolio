@@ -47,8 +47,7 @@ const Footer = () => {
           <Link
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
-            target="_blank"
-            href="#"
+            href="/imprint"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">imprint</p>
@@ -58,8 +57,7 @@ const Footer = () => {
           <Link
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
-            target="_blank"
-            href="#"
+            href="/privacy"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">privacy</p>
