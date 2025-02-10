@@ -5,12 +5,12 @@ const Privacy = () => {
         Datenschutz&shy;erkl&auml;rung
       </h1>
       <h2 className="font-semibold text-xl mb-2 mt-8 tracking-tighter">
-        1. Datenschutz auf einen Blick{' '}
+        1. Datenschutz auf einen Blick
       </h2>
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Allgemeine Hinweise
       </h3>
-      <p>
+      <p className="mb-2">
         Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit
         Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.
         Personenbezogene Daten sind alle Daten, mit denen Sie persönlich
@@ -24,7 +24,7 @@ const Privacy = () => {
       <h4 className="font-medium text-lg mb-1 mt-2 tracking-tighter">
         Wer ist verantwortlich für die Datenerfassung auf dieser Website?
       </h4>
-      <p>
+      <p className="mb-2">
         Die Datenverarbeitung auf dieser Website erfolgt durch den
         Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis
         zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen.
@@ -32,7 +32,7 @@ const Privacy = () => {
       <h4 className="font-medium text-lg mb-1 mt-2 tracking-tighter">
         Wie erfassen wir Ihre Daten?
       </h4>
-      <p>
+      <p className="mb-2">
         Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese
         mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein
         Kontaktformular eingeben. Andere Daten werden automatisch oder nach
@@ -44,7 +44,7 @@ const Privacy = () => {
       <h4 className="font-medium text-lg mb-1 mt-2 tracking-tighter">
         Wofür nutzen wir Ihre Daten?
       </h4>
-      <p>
+      <p className="mb-2">
         Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der
         Website zu gewährleisten. Andere Daten können zur Analyse Ihres
         Nutzerverhaltens verwendet werden. Sofern über die Website Verträge
@@ -55,7 +55,7 @@ const Privacy = () => {
       <h4 className="font-medium text-lg mb-1 mt-2 tracking-tighter">
         Welche Rechte haben Sie bezüglich Ihrer Daten?
       </h4>
-      <p>
+      <p className="mb-2">
         Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft,
         Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu
         erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung
@@ -71,11 +71,14 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Analyse-Tools und Tools von Drittanbietern
       </h3>
-      <p>
+      <p className="mb-2">
         Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch
         ausgewertet werden. Das geschieht vor allem mit sogenannten
-        Analyseprogrammen. Detaillierte Informationen zu diesen
-        Analyseprogrammen finden Sie in der folgenden Datenschutzerklärung.
+        Analyseprogrammen.
+      </p>
+      <p className="mb-2">
+        Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der
+        folgenden Datenschutzerklärung.
       </p>
       <h2 className="font-semibold text-xl mb-4 mt-8 tracking-tighter">
         2. Hosting
@@ -84,32 +87,38 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Externes Hosting
       </h3>
-      <p>
+      <p className="mb-2">
         Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf
         dieser Website erfasst werden, werden auf den Servern des Hosters / der
         Hoster gespeichert. Hierbei kann es sich v. a. um IP-Adressen,
         Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten,
         Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine
-        Website generiert werden, handeln. Das externe Hosting erfolgt zum
-        Zwecke der Vertragserfüllung gegenüber unseren potenziellen und
-        bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer
-        sicheren, schnellen und effizienten Bereitstellung unseres
-        Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit.
-        f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde,
-        erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1
-        lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die
-        Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät
-        des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst.
-        Die Einwilligung ist jederzeit widerrufbar. Unser(e) Hoster wird bzw.
-        werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung
-        seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug
-        auf diese Daten befolgen. Wir setzen folgende(n) Hoster ein: Vercel Inc.
-        440 N Barranca Ave #4133 Covina, CA 91723
+        Website generiert werden, handeln.
+      </p>
+      <p className="mb-2">
+        Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber
+        unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO)
+        und im Interesse einer sicheren, schnellen und effizienten
+        Bereitstellung unseres Online-Angebots durch einen professionellen
+        Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende
+        Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich
+        auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG,
+        soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf
+        Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im
+        Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
+        Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten,
+        wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und
+        unsere Weisungen in Bezug auf diese Daten befolgen.
+      </p>
+      <p className="mb-2"> Wir setzen folgende(n) Hoster ein:</p>
+      <p className="mb-2">
+        Vercel Inc. <br />
+        440 N Barranca Ave #4133 <br /> Covina, CA 91723
       </p>
       <h4 className="font-medium text-lg mb-1 mt-2 tracking-tighter">
         Auftragsverarbeitung
       </h4>
-      <p>
+      <p className="mb-2">
         Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des
         oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen
         datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass
@@ -122,28 +131,33 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Datenschutz
       </h3>
-      <p>
+      <p className="mb-2">
         Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten
         sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und
         entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser
-        Datenschutzerklärung. Wenn Sie diese Website benutzen, werden
-        verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind
-        Daten, mit denen Sie persönlich identifiziert werden können. Die
-        vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und
-        wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das
-        geschieht. Wir weisen darauf hin, dass die Datenübertragung im Internet
-        (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen
-        kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist
-        nicht möglich.
+        Datenschutzerklärung.
+      </p>
+      <p className="mb-2">
+        Wenn Sie diese Website benutzen, werden verschiedene personenbezogene
+        Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie
+        persönlich identifiziert werden können. Die vorliegende
+        Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir
+        sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.
+      </p>
+      <p className="mb-2">
+        Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei
+        der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein
+        lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht
+        möglich.
       </p>
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Hinweis zur verantwortlichen Stelle
       </h3>
-      <p>
+      <p className="mb-2">
         Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website
         ist:
       </p>
-      <p>
+      <p className="mb-2">
         Felix Wilberg
         <br />
         Turmstraße 8
@@ -154,7 +168,7 @@ const Privacy = () => {
         <br />
         E-Mail: felix@felixwilberg.com
       </p>
-      <p>
+      <p className="mb-2">
         Verantwortliche Stelle ist die natürliche oder juristische Person, die
         allein oder gemeinsam mit anderen über die Zwecke und Mittel der
         Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen
@@ -163,7 +177,7 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Speicherdauer
       </h3>
-      <p>
+      <p className="mb-2">
         Soweit innerhalb dieser Datenschutzerklärung keine speziellere
         Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei
         uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein
@@ -178,7 +192,7 @@ const Privacy = () => {
         Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf
         dieser Website
       </h3>
-      <p>
+      <p className="mb-2">
         Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir
         Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a
         DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien
@@ -202,7 +216,7 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Empfänger von personenbezogenen Daten
       </h3>
-      <p>
+      <p className="mb-2">
         Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen
         externen Stellen zusammen. Dabei ist teilweise auch eine Übermittlung
         von personenbezogenen Daten an diese externen Stellen erforderlich. Wir
@@ -220,7 +234,7 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Widerruf Ihrer Einwilligung zur Datenverarbeitung
       </h3>
-      <p>
+      <p className="mb-2">
         Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen
         Einwilligung möglich. Sie können eine bereits erteilte Einwilligung
         jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
@@ -230,7 +244,7 @@ const Privacy = () => {
         Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie
         gegen Direktwerbung (Art. 21 DSGVO)
       </h3>
-      <p>
+      <p className="mb-2">
         WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F
         DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS
         IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER
@@ -242,7 +256,9 @@ const Privacy = () => {
         DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG
         NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER
         DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG
-        VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO). <br />
+        VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).{' '}
+      </p>
+      <p className="mb-2">
         WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU
         BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE
         VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE
@@ -255,7 +271,7 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Beschwerderecht bei der zuständigen Aufsichtsbehörde
       </h3>
-      <p>
+      <p className="mb-2">
         Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein
         Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem
         Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder
@@ -266,7 +282,7 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Recht auf Datenübertragbarkeit
       </h3>
-      <p>
+      <p className="mb-2">
         Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung
         oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder
         an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen
@@ -277,7 +293,7 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Auskunft, Berichtigung und Löschung
       </h3>
-      <p>
+      <p className="mb-2">
         Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit
         das Recht auf unentgeltliche Auskunft über Ihre gespeicherten
         personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der
@@ -288,24 +304,32 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         Recht auf Einschränkung der Verarbeitung
       </h3>
-      <p>
+      <p className="mb-2">
         Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer
         personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit
         an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in
         folgenden Fällen:
-        <br /> Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten
-        personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um
-        dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die
+      </p>
+      <p className="mb-2">
+        Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen
+        Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu
+        überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die
         Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
-        verlangen. <br />
+        verlangen.
+      </p>
+      <p className="mb-2">
         Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig
         geschah/geschieht, können Sie statt der Löschung die Einschränkung der
-        Datenverarbeitung verlangen. <br />
+        Datenverarbeitung verlangen.
+      </p>
+      <p className="mb-2">
         Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie
         jedoch zur Ausübung, Verteidigung oder Geltendmachung von
         Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die
         Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
-        verlangen. <br />
+        verlangen.
+      </p>
+      <p className="mb-2">
         Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben,
         muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen
         werden. Solange noch nicht feststeht, wessen Interessen überwiegen,
@@ -321,21 +345,23 @@ const Privacy = () => {
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">
         SSL- bzw. TLS-Verschlüsselung
       </h3>
-      <p>
+      <p className="mb-2">
         Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung
         vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die
         Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-
         Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass
         die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und
-        an dem Schloss-Symbol in Ihrer Browserzeile. <br /> Wenn die SSL- bzw.
-        TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns
-        übermitteln, nicht von Dritten mitgelesen werden.
+        an dem Schloss-Symbol in Ihrer Browserzeile.
+      </p>
+      <p className="mb-2">
+        Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten,
+        die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
       </p>
       <h2 className="font-semibold text-xl mb-4 mt-8 tracking-tighter">
         4. Datenerfassung auf dieser Website
       </h2>
       <h3 className="font-bold text-xl mb-2 mt-6 tracking-tighter">Cookies</h3>
-      <p>
+      <p className="mb-2">
         Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind
         kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie
         werden entweder vorübergehend für die Dauer einer Sitzung
@@ -344,17 +370,22 @@ const Privacy = () => {
         gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis
         Sie diese selbst löschen oder eine automatische Löschung durch Ihren
         Webbrowser erfolgt.
-        <br /> Cookies können von uns (First-Party-Cookies) oder von
-        Drittunternehmen stammen (sog. Third-Party- Cookies).
-        Third-Party-Cookies ermöglichen die Einbindung bestimmter
-        Dienstleistungen von Drittunternehmen innerhalb von Webseiten (z. B.
-        Cookies zur Abwicklung von Zahlungsdienstleistungen).
-        <br /> Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind
-        technisch notwendig, da bestimmte Webseitenfunktionen ohne diese nicht
+      </p>
+      <p className="mb-2">
+        Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen
+        stammen (sog. Third-Party- Cookies). Third-Party-Cookies ermöglichen die
+        Einbindung bestimmter Dienstleistungen von Drittunternehmen innerhalb
+        von Webseiten (z. B. Cookies zur Abwicklung von
+        Zahlungsdienstleistungen).
+      </p>
+      <p className="mb-2">
+        Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch
+        notwendig, da bestimmte Webseitenfunktionen ohne diese nicht
         funktionieren würden (z. B. die Warenkorbfunktion oder die Anzeige von
         Videos). Andere Cookies können zur Auswertung des Nutzerverhaltens oder
         zu Werbezwecken verwendet werden.
-        <br />
+      </p>
+      <p className="mb-2">
         Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs,
         zur Bereitstellung bestimmter, von Ihnen erwünschter Funktionen (z. B.
         für die Warenkorbfunktion) oder zur Optimierung der Website (z. B.
@@ -368,18 +399,20 @@ const Privacy = () => {
         wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage dieser
         Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG); die
         Einwilligung ist jederzeit widerrufbar.
-        <br />
+      </p>
+      <p className="mb-2">
         Sie können Ihren Browser so einstellen, dass Sie über das Setzen von
         Cookies informiert werden und Cookies nur im Einzelfall erlauben, die
         Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie
         das automatische Löschen der Cookies beim Schließen des Browsers
         aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität
         dieser Website eingeschränkt sein.
-        <br /> Welche Cookies und Dienste auf dieser Website eingesetzt werden,
-        können Sie dieser Datenschutzerklärung entnehmen.
-        <br />
-        Quelle: https://www.e-recht24.de
       </p>
+      <p className="mb-2">
+        Welche Cookies und Dienste auf dieser Website eingesetzt werden, können
+        Sie dieser Datenschutzerklärung entnehmen.
+      </p>
+      <p className="mb-2">Quelle: https://www.e-recht24.de</p>
     </div>
   );
 };
