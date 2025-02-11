@@ -6,6 +6,57 @@ import { baseUrl } from '@/app/sitemap';
 import CustomMDX from '@/app/components/mdx';
 import CoverImage from '@/app/components/CoverImage';
 
+export const generateMetadata = async (props: Params): Promise<Metadata> => {
+  const params = await props.params;
+  const post = getPostBySlug(params.slug);
+
+  if (!post) {
+    return notFound();
+  }
+
+  const { title, date: publishedTime, excerpt: description, ogImage } = post;
+  const ogImageNew = ogImage
+    ? ogImage.url
+    : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      publishedTime,
+      url: `${baseUrl}/blog/${post.slug}`,
+      images: [
+        {
+          url: ogImageNew
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImageNew]
+    }
+  };
+};
+
+export const generateStaticParams = () => {
+  const posts = getAllPosts();
+
+  return posts.map((post) => ({
+    slug: post.slug
+  }));
+};
+
+type Params = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
 const Post = async (props: Params) => {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
@@ -59,54 +110,3 @@ const Post = async (props: Params) => {
 };
 
 export default Post;
-
-type Params = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
-
-export async function generateMetadata(props: Params): Promise<Metadata> {
-  const params = await props.params;
-  const post = getPostBySlug(params.slug);
-
-  if (!post) {
-    return notFound();
-  }
-
-  const { title, date: publishedTime, excerpt: description, ogImage } = post;
-  const ogImageNew = ogImage
-    ? ogImage.url
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
-
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-      publishedTime,
-      url: `${baseUrl}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImageNew
-        }
-      ]
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [ogImageNew]
-    }
-  };
-}
-
-export async function generateStaticParams() {
-  const posts = getAllPosts();
-
-  return posts.map((post) => ({
-    slug: post.slug
-  }));
-}
