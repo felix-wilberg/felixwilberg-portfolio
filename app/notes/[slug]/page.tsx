@@ -5,6 +5,8 @@ import { formatDate } from '@/lib/api';
 import { baseUrl } from '@/app/sitemap';
 import CustomMDX from '@/app/components/mdx';
 import CoverImage from '@/app/components/CoverImage';
+import Link from 'next/link';
+import { LuArrowLeft } from 'react-icons/lu';
 
 export const generateMetadata = async (props: Params): Promise<Metadata> => {
   const params = await props.params;
@@ -85,12 +87,18 @@ const Post = async (props: Params) => {
               url: `${baseUrl}/blog/${post.slug}`,
               author: {
                 '@type': 'Person',
-                name: 'My Portfolio'
+                name: 'Felix Wilberg'
               }
             })
           }}
         />
-        <h1 className="title font-semibold text-2xl tracking-tighter">
+        <Link
+          href="/notes"
+          className="text-sm text-neutral-600 dark:text-neutral-400 flex flex-row items-center gap-2"
+        >
+          <LuArrowLeft /> all notes
+        </Link>
+        <h1 className=" my-4 title font-semibold text-4xl tracking-tighter">
           {post.title}
         </h1>
         <div className="flex justify-between items-center mt-2 mb-8 text-sm">

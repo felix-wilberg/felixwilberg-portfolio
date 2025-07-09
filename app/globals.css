@@ -85,15 +85,15 @@ html {
 }
 
 .prose p {
-    @apply my-4 text-neutral-800 dark:text-neutral-200;
+    @apply text-lg/8 my-9 text-neutral-800 dark:text-neutral-200;
 }
 
 .prose h1 {
-    @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+    @apply text-6xl font-medium tracking-tight mt-6 mb-2;
 }
 
 .prose h2 {
-    @apply text-xl font-medium tracking-tight mt-6 mb-2;
+    @apply text-2xl font-medium tracking-tight mt-6 mb-2;
 }
 
 .prose h3 {
