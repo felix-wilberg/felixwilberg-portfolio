@@ -27,6 +27,11 @@ export function getAllPosts(): Post[] {
   return posts;
 }
 
+export function getPostsAmount() {
+  const slugs = getPostSlugs();
+  return slugs.length;
+}
+
 export function formatDate(date: string, includeRelative = false) {
   const currentDate = new Date();
   if (!date.includes('T')) {
