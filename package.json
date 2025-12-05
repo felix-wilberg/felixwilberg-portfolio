@@ -1,6 +1,6 @@
 {
   "name": "felixWilbergPortfolio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,7 @@
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "next": "15.3.5",
+    "next": "15.3.6",
     "next-mdx-remote": "^5.0.0",
     "react-icons": "^5.5.0",
     "sugar-high": "^0.9.3"
